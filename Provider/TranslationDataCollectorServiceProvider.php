@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace Viserio\Component\Translation\Providers;
+namespace Viserio\Component\Translation\Provider;
 
 use Interop\Container\ServiceProvider;
 use Psr\Container\ContainerInterface;
@@ -10,7 +10,7 @@ use Viserio\Component\Contracts\OptionsResolver\RequiresConfig as RequiresConfig
 use Viserio\Component\Contracts\Profiler\Profiler as ProfilerContract;
 use Viserio\Component\Contracts\Translation\Translator as TranslatorContract;
 use Viserio\Component\OptionsResolver\Traits\StaticOptionsResolverTrait;
-use Viserio\Component\Translation\DataCollectors\ViserioTranslationDataCollector;
+use Viserio\Component\Translation\DataCollector\ViserioTranslationDataCollector;
 
 class TranslationDataCollectorServiceProvider implements
     ServiceProvider,
@@ -69,8 +69,6 @@ class TranslationDataCollectorServiceProvider implements
                     $container->get(TranslatorContract::class)
                 ));
             }
-
-            return $profiler;
         }
 
         return $profiler;

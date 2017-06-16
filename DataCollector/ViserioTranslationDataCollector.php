@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace Viserio\Component\Translation\DataCollectors;
+namespace Viserio\Component\Translation\DataCollector;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -8,7 +8,7 @@ use Viserio\Component\Contracts\Profiler\PanelAware as PanelAwareContract;
 use Viserio\Component\Contracts\Profiler\TooltipAware as TooltipAwareContract;
 use Viserio\Component\Contracts\Translation\Traits\TranslatorAwareTrait;
 use Viserio\Component\Contracts\Translation\Translator as TranslatorContract;
-use Viserio\Component\Profiler\DataCollectors\AbstractDataCollector;
+use Viserio\Component\Profiler\DataCollector\AbstractDataCollector;
 
 class ViserioTranslationDataCollector extends AbstractDataCollector implements
     TooltipAwareContract,

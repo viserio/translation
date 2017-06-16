@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
-namespace Viserio\Component\Translation\Formatters;
+namespace Viserio\Component\Translation\Formatter;
 
 use IntlException;
 use MessageFormatter;
-use Viserio\Component\Contracts\Translation\Exceptions\CannotFormatException;
-use Viserio\Component\Contracts\Translation\Exceptions\CannotInstantiateFormatterException;
+use Viserio\Component\Contracts\Translation\Exception\CannotFormatException;
+use Viserio\Component\Contracts\Translation\Exception\CannotInstantiateFormatterException;
 use Viserio\Component\Contracts\Translation\MessageFormatter as MessageFormatterContract;
 
 class IntlMessageFormatter implements MessageFormatterContract

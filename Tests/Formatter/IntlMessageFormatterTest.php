@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
-namespace Viserio\Component\Translation\Tests\Formatters;
+namespace Viserio\Component\Translation\Tests\Formatter;
 
 use PHPUnit\Framework\TestCase;
-use Viserio\Component\Translation\Formatters\IntlMessageFormatter;
+use Viserio\Component\Translation\Formatter\IntlMessageFormatter;
 
 class IntlMessageFormatterTest extends TestCase
 {
@@ -20,7 +20,7 @@ class IntlMessageFormatterTest extends TestCase
     }
 
     /**
-     * @expectedException \Viserio\Component\Contracts\Translation\Exceptions\CannotInstantiateFormatterException
+     * @expectedException \Viserio\Component\Contracts\Translation\Exception\CannotInstantiateFormatterException
      * @expectedExceptionMessage Constructor failed
      */
     public function testFormatToThrowException()
@@ -31,7 +31,7 @@ female {She avoids bugs} }', 'en', [1]));
     }
 
     /**
-     * @expectedException \Viserio\Component\Contracts\Translation\Exceptions\CannotFormatException
+     * @expectedException \Viserio\Component\Contracts\Translation\Exception\CannotFormatException
      * @expectedExceptionMessage The argument for key 'catchDate' cannot be used as a date or time: U_ILLEGAL_ARGUMENT_ERROR
      */
     public function testFormatToThrowExceptionOnFormat()

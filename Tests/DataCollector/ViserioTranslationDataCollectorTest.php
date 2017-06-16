@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
-namespace Viserio\Component\Translation\Tests\DataCollectors;
+namespace Viserio\Component\Translation\Tests\DataCollector;
 
 use Narrowspark\TestingHelper\Phpunit\MockeryTestCase;
-use Viserio\Component\Translation\DataCollectors\ViserioTranslationDataCollector;
-use Viserio\Component\Translation\Formatters\IntlMessageFormatter;
+use Viserio\Component\Translation\DataCollector\ViserioTranslationDataCollector;
+use Viserio\Component\Translation\Formatter\IntlMessageFormatter;
 use Viserio\Component\Translation\MessageCatalogue;
 use Viserio\Component\Translation\Translator;
 
@@ -40,7 +40,7 @@ class ViserioTranslationDataCollectorTest extends MockeryTestCase
 
         self::assertEquals(
             [
-            'icon'      => file_get_contents(__DIR__ . '/../../DataCollectors/Resources/icons/ic_translate_white_24px.svg'),
+            'icon'      => file_get_contents(__DIR__ . '/../../DataCollector/Resources/icons/ic_translate_white_24px.svg'),
                 'label' => '',
                 'value' => null,
             ],

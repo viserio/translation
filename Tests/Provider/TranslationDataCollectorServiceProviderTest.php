@@ -1,17 +1,17 @@
 <?php
 declare(strict_types=1);
-namespace Viserio\Component\Translation\Tests\Providers;
+namespace Viserio\Component\Translation\Tests\Provider;
 
 use Narrowspark\TestingHelper\Phpunit\MockeryTestCase;
 use Psr\Http\Message\ServerRequestInterface;
 use Viserio\Component\Container\Container;
 use Viserio\Component\Contracts\Profiler\Profiler as ProfilerContract;
 use Viserio\Component\Contracts\Translation\Translator as TranslatorContract;
-use Viserio\Component\HttpFactory\Providers\HttpFactoryServiceProvider;
-use Viserio\Component\Profiler\Providers\ProfilerServiceProvider;
-use Viserio\Component\Translation\Formatters\IntlMessageFormatter;
+use Viserio\Component\HttpFactory\Provider\HttpFactoryServiceProvider;
+use Viserio\Component\Profiler\Provider\ProfilerServiceProvider;
+use Viserio\Component\Translation\Formatter\IntlMessageFormatter;
 use Viserio\Component\Translation\MessageCatalogue;
-use Viserio\Component\Translation\Providers\TranslationDataCollectorServiceProvider;
+use Viserio\Component\Translation\Provider\TranslationDataCollectorServiceProvider;
 use Viserio\Component\Translation\Translator;
 
 class TranslationDataCollectorServiceProviderTest extends MockeryTestCase

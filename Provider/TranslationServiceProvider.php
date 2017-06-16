@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace Viserio\Component\Translation\Providers;
+namespace Viserio\Component\Translation\Provider;
 
 use Interop\Container\ServiceProvider;
 use Psr\Container\ContainerInterface;
@@ -13,7 +13,7 @@ use Viserio\Component\Contracts\Translation\MessageFormatter as MessageFormatter
 use Viserio\Component\Contracts\Translation\TranslationManager as TranslationManagerContract;
 use Viserio\Component\Contracts\Translation\Translator as TranslatorContract;
 use Viserio\Component\OptionsResolver\Traits\StaticOptionsResolverTrait;
-use Viserio\Component\Translation\Formatters\IntlMessageFormatter;
+use Viserio\Component\Translation\Formatter\IntlMessageFormatter;
 use Viserio\Component\Translation\TranslationManager;
 
 class TranslationServiceProvider implements
@@ -66,7 +66,7 @@ class TranslationServiceProvider implements
      *
      * @param \Psr\Container\ContainerInterface $container
      *
-     * @return \Viserio\Component\Translation\Formatters\IntlMessageFormatter
+     * @return \Viserio\Component\Translation\Formatter\IntlMessageFormatter
      */
     public static function createMessageFormatter(ContainerInterface $container): IntlMessageFormatter
     {
