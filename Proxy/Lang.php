@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace Viserio\Component\Translation\Proxie;
+namespace Viserio\Component\Translation\Proxy;
 
 use Viserio\Component\Contracts\Translation\Translator as TranslatorContract;
 use Viserio\Component\StaticalProxy\StaticalProxy;
